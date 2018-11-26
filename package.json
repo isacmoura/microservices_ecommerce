@@ -1,0 +1,24 @@
+{
+  "name": "my_ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce project for the discipline of Software Architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/isacmoura/my_ecommerce.git"
+  },
+  "author": "Isac Moura, Isaac James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/isacmoura/my_ecommerce/issues"
+  },
+  "homepage": "https://gitlab.com/isacmoura/my_ecommerce#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
