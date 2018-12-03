@@ -18,7 +18,9 @@
   "homepage": "https://gitlab.com/isacmoura/my_ecommerce#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cote": "^0.18.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "redbird": "^0.9.0"
   }
 }
