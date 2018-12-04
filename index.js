@@ -1,6 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-var axios = require('axios')
+var request = require('request')
 var mongoose = require('mongoose')
 
 
@@ -35,17 +35,22 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/index.html')
 })
 
-app.get('/users/:id', function(req, response) {
-    var query = user.find({_id: req.params.id}, function(err, res) {
-        if(!err) {
-            response.render('users', {
-                profile: res
-            })
-        } else {
-            response.send('Error in second query. ' + err)
-        }
-        console.log(res)
-    })    
+app.get('/users/:id', function (req, response) {
+    var query = user.find({ _id: req.params.id }).exec(
+        function (err, res) {
+            if (!err) {
+                response.render('users', {
+                    profile: res
+                })
+            } else {
+                response.send('Error in second query. ' + err)
+            }
+            console.log(res)
+        })
+})
+
+app.post('/update', function(req, res) {
+    axios.put('')
 })
 
 app.get('/orders', function (req, res) {
