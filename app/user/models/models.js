@@ -1,4 +1,10 @@
-var orm = require('orm');
 var mongoose = require('mongoose');
 
-var connectionString = 'mongodb://localhost/shop';
+
+var userSchema = new mongoose.Schema({
+    name: {type: String},
+    email: {type: String},
+    password: {type: String}
+}, {collection: 'user'})
+
+mongoose.model('user', userSchema)
