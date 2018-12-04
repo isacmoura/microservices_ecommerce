@@ -50,12 +50,24 @@ app.get('/users/:id', function (req, response) {
 })
 
 app.post('/update', function(req, res) {
-    axios.put('')
+    var id = req.body.id
+    var name = req.body.name
+    var email = req.body.email
+    var password = req.body.password
+    
+    user.findById(id, function (err, data) {
+        if(err) {
+            console.error('error, no entry found');
+        }
+        data.name = name
+        data.email = email
+        data.password = password
+        data.save()
+    })
+    res.redirect(req.get('referer'))
 })
 
-app.get('/orders', function (req, res) {
 
-})
 
 
 app.listen(5002, function() {
